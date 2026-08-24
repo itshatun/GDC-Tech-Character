@@ -1,0 +1,521 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        radial-gradient(circle, #180b35, #080611 50%, #030307);
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* اللعبة */
+
+.game {
+    width: 92%;
+    max-width: 900px;
+    min-height: 600px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    border: 1px solid #4d2675;
+
+    background: rgba(139, 44, 255, 0.03);
+
+    box-shadow: 0 0 40px rgba(139, 44, 255, 0.15);
+}
+
+
+/* اللغة */
+
+.language {
+    position: fixed;
+    top: 25px;
+    right: 30px;
+
+    display: flex;
+    gap: 8px;
+
+    color: #777384;
+}
+
+.language button {
+    border: none;
+    background: none;
+
+    color: #777384;
+
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.language button.active {
+    color: #a855f7;
+}
+
+
+/* البداية */
+
+.start {
+    width: 100%;
+    max-width: 550px;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+.start h3 {
+    color: #a855f7;
+
+    letter-spacing: 10px;
+
+    margin-bottom: 15px;
+}
+
+.line {
+    width: 150px;
+    height: 2px;
+
+    margin: auto;
+    margin-bottom: 25px;
+
+    background: #8b2cff;
+
+    box-shadow: 0 0 15px #8b2cff;
+}
+
+.icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.start h1 {
+    font-size: 45px;
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+}
+
+.start p {
+    color: #aaa6b8;
+
+    font-size: 12px;
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+
+/* الإدخال */
+
+.inputs {
+    width: 100%;
+    max-width: 400px;
+
+    margin: auto;
+}
+
+.inputs input {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 10px;
+
+    border: 1px solid #4d2675;
+    border-radius: 7px;
+
+    background: rgba(139, 44, 255, 0.06);
+
+    color: white;
+
+    outline: none;
+}
+
+.inputs input:focus {
+    border-color: #a855f7;
+}
+
+.inputs small {
+    display: block;
+
+    height: 15px;
+
+    color: #c4a1ff;
+}
+
+
+/* الأزرار */
+
+#startBtn,
+#again {
+    padding: 14px 35px;
+
+    border: 1px solid #a855f7;
+    border-radius: 8px;
+
+    background: #8b2cff;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#startBtn:hover,
+#again:hover {
+    box-shadow: 0 0 20px rgba(139, 44, 255, 0.5);
+}
+
+.hint {
+    margin-top: 15px;
+
+    color: #666676;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+}
+
+
+/* الأسئلة */
+
+.questions {
+    display: none;
+
+    width: 90%;
+    max-width: 700px;
+
+    text-align: center;
+}
+
+#questionNumber {
+    color: #a855f7;
+
+    font-size: 12px;
+    letter-spacing: 3px;
+
+    margin-bottom: 25px;
+}
+
+.questions h2 {
+    margin-bottom: 30px;
+
+    font-size: 28px;
+}
+
+#answers {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.answer {
+    width: 100%;
+
+    padding: 15px;
+
+    border: 1px solid #4d2675;
+    border-radius: 8px;
+
+    background: rgba(139, 44, 255, 0.05);
+
+    color: white;
+
+    text-align: left;
+
+    cursor: pointer;
+}
+
+.answer:hover,
+.answer.selected {
+    background: rgba(139, 44, 255, 0.2);
+
+    border-color: #a855f7;
+}
+
+.progress {
+    width: 100%;
+    height: 4px;
+
+    margin-top: 30px;
+
+    background: #211936;
+}
+
+#progress {
+    display: block;
+
+    width: 14%;
+    height: 100%;
+
+    background: #8b2cff;
+
+    transition: 0.3s;
+}
+
+
+/* النتيجة */
+
+.result {
+    display: none;
+
+    width: 90%;
+    max-width: 700px;
+
+    text-align: center;
+}
+
+
+/* البطاقة */
+
+.card {
+    padding: 28px;
+
+    border: 1px solid #7d40b8;
+    border-radius: 15px;
+
+    background:
+        linear-gradient(145deg, #231141, #080611);
+
+    box-shadow:
+        0 0 25px rgba(139, 44, 255, 0.2);
+
+    text-align: left;
+}
+
+.cardTop {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.cardTop b {
+    display: block;
+
+    color: #a855f7;
+
+    letter-spacing: 7px;
+}
+
+.cardTop small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #777384;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.cardTop > span {
+    color: #a855f7;
+}
+
+
+/* الشخصية */
+
+.character {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+
+#characterIcon {
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid #61388b;
+    border-radius: 12px;
+
+    background: rgba(139, 44, 255, 0.08);
+
+    font-size: 45px;
+}
+
+#characterText {
+    color: #8f899b;
+
+    font-size: 9px;
+}
+
+#characterName {
+    margin-top: 7px;
+
+    font-size: 28px;
+}
+
+hr {
+    border: none;
+
+    height: 1px;
+
+    margin: 22px 0;
+
+    background: #5d278f;
+}
+
+
+/* المعلومات */
+
+.info {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+    margin-bottom: 22px;
+}
+
+.info div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.info small,
+.skillsBox > small {
+    color: #777384;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+}
+
+.info strong {
+    font-size: 16px;
+}
+
+
+/* المهارات */
+
+#skills {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 10px;
+}
+
+.skill {
+    padding: 7px 10px;
+
+    border: 1px solid #61388b;
+    border-radius: 5px;
+
+    background: rgba(139, 44, 255, 0.08);
+
+    color: #d8c6f5;
+
+    font-size: 11px;
+}
+
+#description {
+    margin-top: 18px;
+
+    color: #aaa6b8;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+}
+
+
+/* أسفل البطاقة */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 25px;
+    padding-top: 15px;
+
+    border-top: 1px solid #30233d;
+
+    color: #5e5969;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+#again {
+    margin-top: 20px;
+
+    background: transparent;
+}
+
+
+/* عربي */
+
+body[dir="rtl"] .card {
+    text-align: right;
+}
+
+body[dir="rtl"] .answer {
+    text-align: right;
+}
+
+body[dir="rtl"] input {
+    text-align: right;
+}
+
+
+/* الجوال */
+
+@media (max-width: 600px) {
+
+    .game {
+        min-height: 570px;
+    }
+
+    .start h1 {
+        font-size: 32px;
+    }
+
+    .questions h2 {
+        font-size: 22px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .info {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    #characterName {
+        font-size: 21px;
+    }
+}

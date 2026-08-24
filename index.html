@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GDC | Tech Character</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="language">
+        <button id="enBtn">EN</button>
+        <span>|</span>
+        <button id="arBtn">AR</button>
+    </div>
+
+
+    <div class="game">
+
+        <!-- البداية -->
+        <div class="start" id="start">
+
+            <div class="decoration top">&lt;/&gt;</div>
+
+            <h3>G D C</h3>
+
+            <div class="line"></div>
+
+            <div class="icon">🎮</div>
+
+            <h1>TECH CHARACTER</h1>
+
+            <p id="subtitle">
+                DISCOVER YOUR TECH IDENTITY
+            </p>
+
+
+            <div class="inputs">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your name"
+                >
+
+                <input
+                    type="text"
+                    id="major"
+                    placeholder="Your major"
+                >
+
+                <small id="error"></small>
+
+            </div>
+
+
+            <button id="startBtn">
+                ▶ START
+            </button>
+
+            <div class="hint" id="hint">
+                CREATE YOUR TECH ID
+            </div>
+
+        </div>
+
+
+        <!-- الأسئلة -->
+        <div class="questions" id="questions">
+
+            <div id="questionNumber">
+                QUESTION 01 / 07
+            </div>
+
+            <h2 id="question"></h2>
+
+            <div id="answers"></div>
+
+            <div class="progress">
+                <span id="progress"></span>
+            </div>
+
+        </div>
+
+
+        <!-- النتيجة -->
+        <div class="result" id="result">
+
+            <div class="card">
+
+                <div class="cardTop">
+
+                    <div>
+                        <b>G D C</b>
+
+                        <small id="cardTitle">
+                            TECH IDENTITY
+                        </small>
+                    </div>
+
+                    <span>&lt;/&gt;</span>
+
+                </div>
+
+
+                <div class="character">
+
+                    <div id="characterIcon">
+                        💻
+                    </div>
+
+                    <div>
+
+                        <small id="characterText">
+                            YOUR TECH CHARACTER
+                        </small>
+
+                        <h2 id="characterName">
+                            CODE MASTER
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <hr>
+
+
+                <div class="info">
+
+                    <div>
+                        <small id="nameText">NAME</small>
+                        <strong id="resultName"></strong>
+                    </div>
+
+                    <div>
+                        <small id="majorText">MAJOR</small>
+                        <strong id="resultMajor"></strong>
+                    </div>
+
+                </div>
+
+
+                <div class="skillsBox">
+
+                    <small id="skillsText">
+                        SKILLS
+                    </small>
+
+                    <div id="skills"></div>
+
+                </div>
+
+
+                <p id="description"></p>
+
+
+                <div class="footer">
+
+                    <span>GDC // TECH CHARACTER</span>
+
+                    <span id="idNumber">
+                        ID // 000
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button id="again">
+                ↻ PLAY AGAIN
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
