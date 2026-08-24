@@ -511,8 +511,10 @@ function changeLanguage(lang) {
 
     if (lang === "ar") {
 
+        /* العنوان العربي */
         document.getElementById("title").textContent =
-    "شخصيتك التقنية";
+            "شخصيتك التقنية";
+
         document.getElementById("subtitle").textContent =
             "اكتشف شخصيتك التقنية";
 
@@ -532,6 +534,10 @@ function changeLanguage(lang) {
         arBtn.classList.add("active");
 
     } else {
+
+        /* العنوان الإنجليزي */
+        document.getElementById("title").textContent =
+            "TECH CHARACTER";
 
         document.getElementById("subtitle").textContent =
             "DISCOVER YOUR TECH IDENTITY";
