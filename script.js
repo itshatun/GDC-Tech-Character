@@ -511,6 +511,8 @@ function changeLanguage(lang) {
 
     if (lang === "ar") {
 
+        document.getElementById("title").textContent =
+    "شخصيتك التقنية";
         document.getElementById("subtitle").textContent =
             "اكتشف شخصيتك التقنية";
 
